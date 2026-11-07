@@ -1,0 +1,37 @@
+# Operating-system files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Local credentials; keep safe configuration examples shareable
+.env
+.env.*
+!.env.example
+!.env.*.example
+!.env.sample
+
+# Installed dependencies and Python environments
+node_modules/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# Generated builds and caches; submit source and dependency lockfiles
+dist/
+build/
+.next/
+.nuxt/
+.output/
+.turbo/
+.cache/
+.pytest_cache/
+.mypy_cache/
+coverage/
+
+# Editor temporary files
+*.swp
+*.swo
+*~
+
+# Intentionally retain prompts, run logs, screenshots, and lockfiles.

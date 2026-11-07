@@ -1,0 +1,20 @@
+{
+  "thread_id": "product-hunt-revenue-fixture",
+  "title": "Launchboard · Product Hunt clone",
+  "goal": "# Goal\n\nMake revenue from Launchboard, a Product Hunt clone website where people discover and upvote new products.\n\n## Boundaries\n\n- Keep discovery, voting, and ordinary submissions free. Clearly label any paid placement and keep it out of organic rankings.\n- Work on a local prototype with fictional data. No deployment, real payments, outreach, or claims of actual revenue.\n",
+  "messages": [
+    {
+      "role": "user",
+      "text": "Assume Launchboard is a Product Hunt clone: people discover, submit, and upvote new products. I want it to make revenue. Use a local prototype and fictional data only. Keep the community features free and separate any labelled paid placements from organic rankings."
+    },
+    {
+      "role": "assistant",
+      "phase": "final_answer",
+      "text": "Understood. The local website is a blank prototype. No monetization feature has been built, no pricing has been agreed, and no revenue has been recorded."
+    }
+  ],
+  "first_submission": "Build a small, usable local discovery page for Launchboard with fictional product launches, votes, and free submission access. Make it possible to add a clearly labelled monetization surface separately. Keep this to one concrete increment.",
+  "user_steering": {
+    "5": "New decision from the product owner: the only paid offer for this prototype is a clearly labelled Featured Launch at $49 for seven days. Do not introduce subscriptions or additional price tiers. Continue the useful part of the planned work within this scope."
+  }
+}
