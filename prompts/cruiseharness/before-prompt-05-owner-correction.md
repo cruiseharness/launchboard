@@ -1,0 +1,1 @@
+New decision from the product owner: the only paid offer for this prototype is a clearly labelled Featured Launch at $49 for seven days. Do not introduce subscriptions or additional price tiers. Continue the useful part of the planned work within this scope.

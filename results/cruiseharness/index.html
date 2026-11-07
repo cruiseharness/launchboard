@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Launchboard — Find your next favorite</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header><a class="brand" href="./">◈ Launchboard</a><span>Fresh ideas, shared freely.</span><a class="button" href="#submit">Submit a product</a></header>
+  <main>
+    <section class="intro"><p class="eyebrow">THE DAILY DISCOVERY</p><h1>Small launches.<br>Big possibilities.</h1><p>Discover something useful. Cheer on its makers. Share your own.</p></section>
+    <div class="layout">
+      <section aria-labelledby="launches-title"><div class="section-heading"><h2 id="launches-title">Today's launches</h2><span>Community ranked · always free</span></div><p class="demo">Local demo · all products and vote counts are fictional.</p><div id="products"></div></section>
+      <aside>
+        <section class="card" aria-labelledby="sponsor-title">
+          <p class="eyebrow">SPONSORED · FICTIONAL DEMO</p><h2 id="sponsor-title">Fern Studio</h2><p id="sponsor-card-description">A little space to map your team's next big idea.</p><button class="button" id="sponsor-card-cta" type="button" aria-haspopup="dialog" aria-controls="product-destination">Explore Fern Studio</button><p>Featured Launch · $49 for seven days. Prototype offer only; no active sponsorship or agreed purchase. Separate from community rankings.</p><p id="sponsor-card-schedule">Original sample · no illustrative dates selected. Featured Launch · $49 total for seven days.</p><p class="demo">Illustrative schedule only; no reservation or availability guarantee.</p><p id="placement-status" role="status" aria-live="polite">Original fictional sample · local placement preview only. Product CTA opens a fictional destination and adds a simulated click and impression.</p><button class="button secondary" id="placement-reset" type="button" disabled>Reset sample placement</button>
+          <section class="performance-panel" aria-labelledby="performance-heading">
+            <h3 id="performance-heading">Simulated performance</h3>
+            <p class="demo">Local fictional metrics only. No actual audience or performance claims. Each simulated click also adds one impression. Counts reset on refresh, placement apply, or sample reset.</p>
+            <dl class="performance-metrics" aria-live="polite" aria-atomic="true">
+              <div><dt>Simulated impressions</dt><dd id="simulated-impressions">0</dd></div>
+              <div><dt>Simulated clicks</dt><dd id="simulated-clicks">0</dd></div>
+              <div><dt>Simulated CTR</dt><dd id="simulated-ctr">0%</dd></div>
+            </dl>
+            <button class="button" id="simulate-impression" type="button">Simulate impression</button>
+            <button class="button" id="simulate-click" type="button">Simulate click</button>
+          </section>
+          <button class="button" id="sponsor-toggle" type="button" aria-expanded="false" aria-controls="sponsor-inquiry">Open sponsorship inquiry</button>
+          <div id="sponsor-inquiry" hidden>
+            <h3>Sponsorship inquiry demo</h3><p>Use fictional details only. This form stays on this page and sends nothing.</p>
+            <form id="sponsorship">
+              <label for="sponsor-company">Company</label><input id="sponsor-company" name="company" maxlength="60" value="Fern Studio" required>
+              <label for="sponsor-email">Sample contact email</label><input id="sponsor-email" name="email" type="email" maxlength="100" value="hello@fern.example" required>
+              <label for="sponsor-product">Product name</label><input id="sponsor-product" name="product" maxlength="60" value="Fern Studio" required>
+              <label for="sponsor-description">Short description</label><input id="sponsor-description" name="description" maxlength="140" value="A little space to map your team's next big idea." required>
+              <label for="sponsor-cta">CTA label</label><input id="sponsor-cta" name="cta" maxlength="40" value="Explore Fern Studio" required>
+              <label for="sponsor-start">Illustrative start date</label><input id="sponsor-start" name="start" type="date" required>
+              <p id="preview-schedule" aria-live="polite"></p><p class="demo">Illustrative schedule only; no reservation or availability guarantee. Featured Launch · $49 total for seven days.</p>
+              <section class="placement-preview" aria-labelledby="preview-heading">
+                <h3 id="preview-heading">Placement preview</h3>
+                <p class="eyebrow">SPONSORED · FICTIONAL DEMO</p>
+                <h4 id="preview-product"></h4><p id="preview-description"></p>
+                <button class="button" id="preview-cta" type="button" disabled></button>
+                <p class="demo">Local preview only · CTA is inactive. Separate from organic rankings.</p>
+              </section>
+              <button class="button" type="submit">Preview inquiry locally</button>
+            </form>
+            <section id="inquiry-summary" class="inquiry-summary" aria-labelledby="summary-heading" hidden>
+              <h3 id="summary-heading">Inquiry review summary</h3>
+              <p class="eyebrow">SPONSORED · FICTIONAL DEMO</p>
+              <p id="summary-status" role="status" aria-live="polite"></p>
+              <dl id="summary-details"></dl>
+              <button class="button" id="placement-apply" type="button" disabled>Preview this placement on the page</button>
+              <p class="demo">Local snapshot only · separate from organic rankings. Resets on refresh.</p>
+            </section>
+            <p id="sponsor-confirmation" role="status" aria-live="polite"></p>
+          </div>
+        </section>
+        <section class="card revenue-scenario" aria-labelledby="revenue-heading">
+          <p class="eyebrow">FICTIONAL PLANNING SCENARIO</p>
+          <h2 id="revenue-heading">Potential gross revenue</h2>
+          <p>Featured Launch · $49 total per seven-day placement.</p>
+          <label for="scenario-count">Hypothetical number of placements</label>
+          <input id="scenario-count" type="text" inputmode="numeric" pattern="[0-9]+" value="1" aria-describedby="scenario-help scenario-error">
+          <p id="scenario-help" class="demo">Enter a nonnegative whole number. Planning only: no sales, inventory availability, or actual revenue implied. Resets on refresh.</p>
+          <p id="scenario-error" role="status" aria-live="polite"></p>
+          <p id="scenario-result" aria-live="polite" aria-atomic="true"></p>
+        </section>
+        <section class="card" id="submit"><h2>Made something?</h2><p>Ordinary submissions are free. Add a fictional launch to this local page.</p><form id="submission"><label for="name">Product name</label><input id="name" name="name" maxlength="50" required><label for="description">One-line description</label><input id="description" name="description" maxlength="140" required><button class="button" type="submit">Submit for free</button></form><div id="submission-confirmation" hidden><p id="submission-message" role="status" aria-live="polite"></p><button class="button" id="submission-featured" type="button" aria-controls="sponsor-inquiry">Preview a Featured Launch</button><p class="demo">Optional fictional preview · $49 for seven days. Your free submission is already complete. Nothing is sent or purchased.</p></div></section>
+      </aside>
+    </div>
+    <p id="status" role="status" aria-live="polite"></p>
+  </main>
+  <dialog id="product-destination" aria-labelledby="destination-title" aria-describedby="destination-notice">
+    <p class="eyebrow">SPONSORED · FICTIONAL PRODUCT DESTINATION</p>
+    <h2 id="destination-title"></h2>
+    <p id="destination-description"></p>
+    <p id="destination-notice" class="demo">Local visitor preview only. Opening this dialog adds one simulated click and impression; there is no actual audience or performance claim. This fictional destination has no external links or purchase controls.</p>
+    <p class="demo">Nothing was sent or purchased. No pricing was agreed and no revenue was recorded.</p>
+    <form method="dialog"><button class="button" autofocus>Close product preview</button></form>
+  </dialog>
+  <footer>Built for curious people. Discovery, voting and ordinary submissions stay free.<br>Prototype changes last until this page is refreshed. No payments or real revenue.</footer>
+</body>
+</html>
