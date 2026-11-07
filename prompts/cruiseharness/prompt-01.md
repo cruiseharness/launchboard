@@ -1,0 +1,1 @@
+Build a small, usable local discovery page for Launchboard with fictional product launches, votes, and free submission access. Make it possible to add a clearly labelled monetization surface separately. Keep this to one concrete increment.
